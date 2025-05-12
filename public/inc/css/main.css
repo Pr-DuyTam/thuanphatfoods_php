@@ -1,0 +1,545 @@
+/* Sticky navbar */
+/* Mặc định thanh navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: none !important; /* Không có hiệu ứng chuyển tiếp mặc định */
+  // transition: background-color 0.1s, box-shadow 0.1s;
+}
+/* Khi cuộn trang xuống */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* Màu nền nhạt khi cuộn */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ */
+  transition: none !important;
+  //transition: background-color 0.1s, box-shadow 0.1s;
+}
+
+/* Thêm hiệu ứng khi navbar hiển thị trên đầu trang */
+.navbar-light.bg-light {
+  background-color: #ffffff !important; /* Màu nền khi chưa cuộn */
+}
+
+/* Tạo hiệu ứng khi hover vào các mục trong navbar */
+.navbar-nav .nav-link:hover {
+  color: rgb(0, 0, 0); /* Đổi màu chữ khi hover */
+  //transition: color 0.1s ease;
+  transition: none !important;
+}
+
+/* Tìm kiếm */
+.form-control {
+  width: 250px; /* Điều chỉnh chiều rộng của ô tìm kiếm */
+  height: 35px; /* Điều chỉnh chiều cao */
+  font-size: 14px; /* Kích thước chữ nhỏ lại */
+}
+/* Nút tìm kiếm mặc định */
+.btn-search {
+  background-color: white; /* Màu nền nút */
+  color: black; /* Màu chữ nút */
+  border: 1px solid black; /* Viền nút */
+}
+
+/* Nút tìm kiếm khi hover */
+.btn-search:hover {
+  background-color: #3eb959; /* Màu nền khi hover (màu xanh) */
+  color: white; /* Màu chữ khi hover (màu trắng) */
+  border-color: #3eb959; /* Màu viền khi hover (màu xanh) */
+}
+
+.btn-outline-dark {
+  height: 35px; /* Điều chỉnh chiều cao nút */
+  font-size: 14px; /* Kích thước chữ nhỏ lại */
+  padding: 0 10px; /* Giảm padding để nút nhỏ lại */
+}
+
+form.d-flex {
+  margin-right: 30px;
+}
+
+/* Giỏ hàng */
+.header__cart {
+  width: 30px; /* Giảm chiều rộng giỏ hàng */
+  text-align: center; /* Căn giữa các phần tử bên trong */
+}
+
+.header__cart-wrap {
+  position: relative;
+  display: inline-block;
+  padding: 0 8px; /* Giảm padding để làm cho giỏ hàng nhỏ lại */
+  cursor: pointer;
+}
+
+.header__cart-icon {
+  font-size: 1.8rem; /* Giảm kích thước biểu tượng giỏ hàng */
+  color: var(--white-color);
+  margin-top: 6px;
+}
+
+.header__cart-notice {
+  position: absolute;
+  top: -8px; /* Điều chỉnh vị trí của số lượng giỏ hàng */
+  right: -4px;
+  padding: 2px 6px; /* Điều chỉnh padding của vòng tròn thông báo */
+  font-size: 0.8rem; /* Giảm kích thước chữ */
+  line-height: 1.2rem;
+  border-radius: 50%; /* Tạo vòng tròn */
+  border: 0.5px solid #ee4d2d; /* Viền đỏ */
+  color: #fff; /* Chữ màu trắng */
+  background-color: #ee4d2d; /* Nền đỏ */
+}
+
+/*View all*/
+/* Mặc định cho button */
+.btn-out {
+  color: black; /* Màu chữ đen */
+  border-color: black; /* Màu viền đen */
+  padding: 5px 15px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+/* Hiệu ứng hover */
+.btn-out:hover {
+  background-color: gray; /* Màu nền xám khi hover */
+  color: white; /* Màu chữ trắng khi hover */
+  border-color: gray; /* Màu viền xám khi hover */
+}
+
+.btn-view-all {
+  /* margin-left: -625px;
+  margin-bottom: -850px !important; */
+}
+
+/*Button add cart*/
+.btn-cart {
+  display: inline-flex; /* Dùng Flexbox để căn giữa chữ */
+  justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+  align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển màu khi hover */
+}
+
+.btn-cart:hover {
+  background-color: #3eb959; /* Màu bạc khi hover */
+  border-color: silver; /* Thay đổi màu viền thành màu bạc khi hover */
+}
+
+/*font sale*/
+.badge {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*dropdown*/
+/* Dropdown menu chính */
+.dropdown-menu {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  padding: 8px 0;
+  margin-top: 8px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Hiển thị khi active */
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 12px;
+}
+
+/* Các item trong menu */
+.dropdown-item {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #444;
+  transition: all 0.2s ease;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+/* Hiệu ứng hover */
+.dropdown-item:hover {
+  background-color: rgb(207, 207, 209);
+  color: rgb(0, 0, 0);
+}
+
+/* Hiệu ứng active khi click */
+.dropdown-item:active {
+  background-color: #e9ecef;
+}
+
+.dropdown-menu {
+  animation: slideDown 0.3s ease forwards;
+}
+/*Nút Zalo, Facebook, Gọi điện, BecktoTop*/
+.fixed-contact-buttons {
+  position: fixed;
+  bottom: 40px;
+  right: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* căn giữa các nút */
+  gap: 10px; /* khoảng cách giữa các nút */
+  z-index: 9999;
+}
+
+/* Nút chung */
+.contact-btn {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+/* Hover chung */
+.contact-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Màu theo từng loại */
+.contact-btn.facebook {
+  background-color: rgba(59, 89, 152, 0.6);
+}
+.contact-btn.facebook:hover {
+  background-color: rgba(59, 89, 152, 0.85);
+}
+
+.contact-btn.zalo {
+  background-color: rgba(188, 37, 90, 0.6);
+}
+.contact-btn.zalo:hover {
+  background-color: rgba(187, 10, 10, 0.85);
+}
+
+.contact-btn.phone {
+  background-color: rgba(40, 167, 69, 0.6);
+}
+.contact-btn.phone:hover {
+  background-color: rgba(40, 167, 69, 0.85);
+}
+
+/* Các phần tử chứa icon (Zalo, Facebook, Phone) */
+
+.contact-btn,
+.fl-google-zalo {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  width: 50px; /* Đặt kích thước của nút */
+  height: 50px; /* Đặt chiều cao của nút */
+  border-radius: 50%; /* Để các nút có hình tròn */
+  background-color: #ffffff; /* Màu nền nút */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ cho nút */
+  cursor: pointer; /* Đặt con trỏ khi hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tạo hiệu ứng rung nhẹ cho các nút */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Rung nhẹ các nút */
+.contact-btn,
+.fl-google-zalo {
+  animation: shake 2s ease-in-out infinite; /* Rung nhẹ */
+}
+
+/* Thêm hiệu ứng hover cho các nút */
+.contact-btn:hover,
+.fl-google-zalo:hover {
+  animation: shake 1s ease-in-out infinite; /* Rung khi hover */
+  box-shadow: 0 0 15px rgba(90, 89, 89, 0.7); /* Hiệu ứng bóng đổ khi hover */
+}
+
+/* Đảm bảo icon nằm chính giữa */
+.contact-btn i,
+.fl-google-zalo img {
+  font-size: 20px; /* Điều chỉnh kích thước icon */
+  color: rgb(255, 255, 255); /* Màu mặc định của icon */
+}
+
+/* Đổi màu icon khi hover */
+.contact-btn:hover i,
+.fl-google-zalo:hover img {
+  color: #ffffff; /* Đổi màu icon khi hover */
+}
+
+/* Căn chỉnh nút Zalo */
+.fl-google-zalo {
+  width: 50px; /* Kích thước nút */
+  height: 50px; /* Kích thước nút */
+  background-color: rgba(221, 223, 220, 0.6); /* Nền mờ nhẹ với màu Zalo */
+  border-radius: 50%; /* Bo tròn */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fl-google-zalo img {
+  width: 30px; /* Chiều rộng của icon */
+  height: 30px; /* Chiều cao của icon */
+  object-fit: contain; /* Giữ tỷ lệ ảnh */
+}
+
+.fl-google-zalo:hover {
+  background-color: rgba(199, 193, 185, 0.85); /* Đậm hơn khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ */
+  box-shadow: 0 6px 12px rgba(120, 118, 118, 0.2);
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  display: none;
+  z-index: 9999;
+  width: 40px; /* Kích thước nhỏ hơn */
+  height: 40px; /* Kích thước nhỏ hơn */
+  background-color: rgba(39, 34, 35, 0.4); /* Nền mờ */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Bo tròn */
+  font-size: 18px; /* Font size nhỏ hơn */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px); /* Hiệu ứng mờ nền */
+  margin-bottom: -30px; /* Khoảng cách từ dưới lên */
+}
+
+#btn-back-to-top:hover {
+  background-color: rgba(235, 183, 188, 0.75); /* Đậm hơn khi hover */
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+h5 {
+  font-size: 22px;
+  color: rgb(17, 8, 9);
+}
+
+.video-container {
+  width: 100%;
+  height: auto;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.news-item img {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+
+.news-item p {
+  font-size: 16px;
+  color: #333;
+}
+
+.col-md-6 {
+  padding: 30px;
+  margin-right: -10px;
+}
+
+/*Clip video*/
+
+#myVideo {
+  //width: 585px; /* Đảm bảo video chiếm toàn bộ chiều rộng của container */
+  //height: 300px; /* Chiều cao video */
+  position: relative; /* Chiều cao tự động để giữ tỷ lệ khung hình */
+  right: -108px;
+  top: -23px;
+  //width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử cha */
+  //height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ khung hình */
+  //max-width: 585px; /* Giới hạn chiều rộng video là 585px */
+  max-height: 300px; /* Giới hạn chiều cao video là 300px */
+  width: 585px; /* Chiều rộng tự động để giữ tỷ lệ */
+  height: 100%; /* Đặt chiều cao video bằng chiều cao của phần tử chứa */
+  max-width: 100%; /* Đảm bảo video không vượt quá chiều rộng của container */
+  object-fit: cover; /* Đảm bảo video lấp đầy khung mà không bị biến dạng */
+}
+
+.text-right {
+  position: relative;
+  top: -28px; /* Đẩy chữ "VIDEO" lên trên */
+  right: -110px; /* Đẩy chữ "VIDEO" sang bên phải */
+}
+
+/*text news*/
+.news-item {
+  display: flex;
+  align-items: center; /* Căn chỉnh các phần tử theo chiều ngang */
+  margin-bottom: 20px;
+  text-decoration: none; /* Bỏ gạch chân cho các liên kết */
+}
+
+.news-item img {
+  width: 80px; /* Điều chỉnh kích thước ảnh */
+  height: 85px;
+  object-fit: cover;
+  margin-right: 15px; /* Khoảng cách giữa ảnh và text */
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+}
+
+.news-item .title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.news-item .description {
+  font-size: 14px;
+  color: #777; /* Màu nhạt cho text dưới */
+}
+
+/*CSS Đối tác logo*/
+.logo-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0;
+  overflow: hidden;
+}
+.logo-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.logo-item {
+  flex: 0 0 20%;
+  padding: 0 45px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.logo-item img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-item:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+}
+.prev,
+.next {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Fade-out effect for the disabled arrows */
+.prev[disabled],
+.next[disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.mst-text {
+  font-weight: bold; /* Để chữ MST đậm */
+  color: #e74c3c; /* Màu sắc tùy chọn */
+  font-size: 8px !important;
+}
+/* Căn chỉnh các icon và viền cho các icon */
+/* Căn chỉnh các icon và viền cho các icon */
+.icon-circle {
+  margin-top: -5px;
+  display: inline-flex; /* Đảm bảo các icon được căn chỉnh bên cạnh văn bản */
+  align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+  width: 25px; /* Chiều rộng của vòng tròn */
+  height: 25px; /* Chiều cao của vòng tròn */
+  border: 1px solid #333; /* Viền của vòng tròn */
+  border-radius: 50%; /* Tạo hình tròn */
+  background-color: #e5e7e7; /* Màu nền trắng */
+  color: #333; /* Màu của icon */
+  font-size: 10px; /* Kích thước của icon */
+  margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+  flex-shrink: 0; /* Đảm bảo icon không bị co lại nếu không gian bị hạn chế */
+}
+
+/* Căn chỉnh các phần tử <p> */
+.address {
+  display: flex; /* Sử dụng flexbox để sắp xếp các phần tử theo chiều ngang */
+  align-items: center; /* Căn giữa icon và text theo chiều dọc */
+  margin: 5px 0; /* Khoảng cách giữa các dòng */
+  margin-bottom: 10px; /* Khoảng cách giữa các dòng */
+}
+
+/* Để chữ MST đậm và màu đỏ */
+.text {
+  margin-top: 5px;
+  font-weight: normal; /* Để chữ không bị đậm */
+  color: #333; /* Màu chữ */
+  font-size: 14px; /* Kích thước của văn bản */
+}
+

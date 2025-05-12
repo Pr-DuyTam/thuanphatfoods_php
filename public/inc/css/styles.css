@@ -1,0 +1,133 @@
+/* styles.css */
+
+/* Các kiểu dáng cơ bản của body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden; /* Ngăn chặn cuộn ngang */
+  width: 100%;
+}
+
+/* Đặt nền sáng cho các phần tử */
+.bg-light {
+  background-color: #f4f6f6 !important;
+}
+
+/* Footer styles */
+/* Footer container */
+footer {
+  background-color: #e5e7e7; /* Màu nền cho footer */
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột đều nhau */
+  gap: 20px;
+  padding: 0 130px;
+}
+
+.footer-left,
+.footer-center,
+.footer-map {
+  padding: 10px;
+}
+
+/* Tiêu đề của các cột */
+.footer-left h4,
+.footer-center h4,
+.footer-map h4 {
+  color: #e74c3c; /* Màu tiêu đề */
+  margin-bottom: 20px;
+}
+
+/* Các đoạn văn bản trong footer */
+.footer-left p,
+.footer-center ul,
+.footer-center p,
+.footer-map p {
+  margin: 5px 0;
+}
+
+/* Cột chính sách sẽ sử dụng flexbox để căn chỉnh chi nhánh */
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Để các mục (chính sách, chi nhánh) phân bổ đều */
+}
+
+.footer-center p {
+  margin: 5px 0;
+}
+/* Danh sách chính sách */
+.footer-center ul {
+  list-style-type: none;
+  padding: 0 0 40px;
+}
+
+/* Liên kết trong danh sách chính sách */
+.footer-center ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-center ul li a:hover {
+  color: #e74c3c;
+}
+.footer-center-cd {
+  margin-bottom: 0px;
+}
+/* Bản đồ */
+.footer-map {
+  padding: 10px 0 10px 10px;
+}
+.footer-map img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Chi nhánh bên dưới bản đồ */
+.footer-map .branch {
+  margin-top: 20px;
+}
+.footer-map-cd {
+  margin-top: 30px;
+}
+/* Các chi nhánh trong cột 1 và cột 2 */
+.branch {
+  margin-top: 20px;
+}
+.text-sub-title {
+  font-size: 22px;
+}
+
+/* Thêm vào file CSS của bạn */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tuỳ chỉnh hướng hiệu ứng */
+.reveal-left {
+  transform: translateX(-50px);
+}
+
+.reveal-right {
+  transform: translateX(50px);
+}
+
+.reveal-zoom {
+  transform: scale(0.9);
+}
