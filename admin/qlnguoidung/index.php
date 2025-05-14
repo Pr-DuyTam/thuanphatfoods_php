@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_SESSION["nguoidung"]))
     header("location:../index.php");
 if (!isset($_SESSION["nguoidung"]) || $_SESSION["nguoidung"]["loai"] != 1) {

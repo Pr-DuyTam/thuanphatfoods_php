@@ -62,129 +62,8 @@ body {
     display: none;
   }
 }
-
-/* ------------------------------------------------------Tablet---------------------------------------------------*/
-@media (min-width: 740px) and (max-width: 1023px) {
-  /* Điều chỉnh grid system */
-  .row-cols-md-3 > * {
-    flex: 0 0 33.333333% !important;
-    max-width: 33.333333% !important;
-  }
-
-  /* Tối ưu kích thước card */
-  .card {
-    margin-bottom: 1.5rem;
-  }
-
-  /* Điều chỉnh kích thước chữ */
-  .card-body h5 {
-    font-size: 15px;
-  }
-
-  .card-body p {
-    font-size: 1rem;
-  }
-
-  /* Điều chỉnh nút */
-  .btn-cart {
-    padding: 8px 15px;
-    font-size: 13px;
-  }
-
-  /* Giảm khoảng cách giữa các cột */
-  .gx-lg-4 {
-    --bs-gutter-x: 1rem;
-  }
-
-  .justify-content-center {
-    justify-content: left !important;
-  }
-
-  .btn-view-all {
-    margin-bottom: -777px;
-  }
-
-  .text-right {
-    position: relative;
-    top: -25px;
-    right: -10px;
-  }
-  #myVideo {
-    position: relative;
-    right: -10px;
-    top: -23px;
-    max-height: 300px;
-    width: 585px;
-    height: 100%;
-    max-width: 100%;
-    object-fit: cover;
-  }
-  .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .navbar-logo {
-    order: 2; /* Đưa logo về bên phải */
-    margin-left: auto;
-  }
-
-  .navbar-menu {
-    order: 1; /* Menu về bên trái */
-    width: 100%;
-  }
-
-  .custom-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .custom-navbar .navbar-toggler {
-    order: 1;
-    margin-right: auto;
-  }
-
-  .custom-navbar .navbar-brand {
-    order: 2;
-    margin-left: auto;
-  }
-  .header__cart-wrap {
-    margin-left: -5px;
-  }
-  element.style {
-    margin-right: -635px;
-  }
-
-  .logo {
-    margin-left: -20px;
-  }
-
-  .logo-right {
-    display: inline-block !important;
-  }
-
-  .navbar-collapse {
-    display: none; /* Ẩn menu mặc định */
-  }
-
-  /* Hiển thị khi menu được mở */
-  .navbar-collapse.show {
-    display: block !important;
-  }
-
-
   
-  .tieudelg{
-    display: block;
-  }
-  .tieudesm{
-    
-    display: none;
-  }
-}
+
 
 /*--------------------------------------------------------------------------------- Mobile: Màn hình nhỏ hơn 768px ----------------------------------------------*/
 @media (max-width: 767px) {
@@ -1425,10 +1304,6 @@ body {
 
 /* Tablet: Màn hình từ 768px đến 1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
-  body {
-    background-color: lightblue; /* Ví dụ */
-  }
-  .text {
-    display: block;
-  }
+
+
 }

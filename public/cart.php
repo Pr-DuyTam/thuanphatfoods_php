@@ -136,6 +136,63 @@ include("inc/top.php");
             </div>
         </div>
     </form>
+    <!-- <form action="index.php">
+    <table class="table table-hover">
+        <tr>
+            <th class="colum-th">Hình ảnh</th>
+            <th class="colum-th">Tên hàng</th>
+            <th class="colum-th">Đơn giá</th>
+            <th class="colum-th">Số lượng</th>
+            <th class="colum-th">Thành tiền</th>
+        </tr>
+        <?php foreach ($giohang as $id => $mh): ?>
+            <tr>
+                <td><img width="50" src="../<?php echo $mh["hinhanh"]; ?>"></td>
+                <td><?php echo $mh["tenmathang"]; ?></td>
+                <td><?php echo number_format($mh["giaban"]); ?> vnd</td>
+                <td>
+                    <input class="soluong-input" type="number" name="mh[<?php echo $id; ?>]" 
+                        value="<?php echo $mh["soluong"]; ?>" min="0"
+                        onchange="capNhatGia(<?php echo $id; ?>, <?php echo $mh['giaban']; ?>)">
+                </td>
+                <td id="thanhtien-<?php echo $id; ?>"><?php echo number_format($mh["thanhtien"]); ?> vnd</td>
+            </tr>
+        <?php endforeach; ?>
+        <tr>
+            <td colspan="3"></td>
+            <td class="fw-bold tong-tien">Tổng tiền</td>
+            <td class="text-danger fw-bold" id="tongtien"><?php echo number_format(tinhtiengiohang()); ?> vnd</td>
+        </tr>
+    </table>
+
+    <div class="row row-end">
+        <div class="col col-all">
+            <a href="index.php?action=xoagiohang">Xóa tất cả</a> (Nhập số lượng = 0 để xóa mặt hàng)
+        </div>
+        <div class="col text-end">
+            <div class="button-container">
+                <a href="index.php" class="btn btn-danger btn-huy">Hủy</a>
+                <a href="index.php?action=thanhtoan" class="btn btn-success btn-thanhtoan">Thanh toán</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+function capNhatGia(id, gia) {
+    let soLuong = document.querySelector(`input[name="mh[${id}]"]`).value;
+    let thanhTien = soLuong * gia;
+    document.getElementById(`thanhtien-${id}`).innerText = thanhTien.toLocaleString() + " vnd";
+
+    let tongTien = 0;
+    document.querySelectorAll("[id^='thanhtien-']").forEach(el => {
+        tongTien += parseInt(el.innerText.replace(/\D/g, ''));
+    });
+
+    document.getElementById("tongtien").innerText = tongTien.toLocaleString() + " vnd";
+}
+</script> -->
+
 <?php } // end if ?>
 <?php
 include("inc/bottom.php");

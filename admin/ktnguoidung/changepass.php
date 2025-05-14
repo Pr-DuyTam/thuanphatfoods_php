@@ -1,5 +1,7 @@
+<?php
+session_start(); // Khởi động phiên làm việc
+?>
 <?php include("../inc/top.php"); ?>
-
 <!-- Form cập nhật thông tin ng dùng-->
 <div class="row">
   <div class="col-12 col-md-10 m-auto">
